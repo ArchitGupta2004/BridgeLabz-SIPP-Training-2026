@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class StudentGrades {
     public static int[][] generateScores(int numStudents) {
         int[][] scores = new int[numStudents][3];
@@ -10,7 +9,6 @@ public class StudentGrades {
         }
         return scores;
     }
-
     public static double[][] calculateStats(int[][] scores) {
         double[][] stats = new double[scores.length][3]; // total, avg, percentage
         for (int i = 0; i < scores.length; i++) {
@@ -23,7 +21,6 @@ public class StudentGrades {
         }
         return stats;
     }
-
     public static String[] calculateGrades(double[][] stats) {
         String[] grades = new String[stats.length];
         for (int i = 0; i < stats.length; i++) {
@@ -37,10 +34,8 @@ public class StudentGrades {
         }
         return grades;
     }
-
     public static void displayScorecard(int[][] scores, double[][] stats, String[] grades) {
-        System.out.printf("%-5s | %-5s | %-5s | %-5s | %-6s | %-7s | %-10s | %-5s\n", 
-            "Stu", "Phy", "Chem", "Math", "Total", "Average", "Percentage", "Grade");
+        System.out.printf("%-5s | %-5s | %-5s | %-5s | %-6s | %-7s | %-10s | %-5s\n",   "Stu", "Phy", "Chem", "Math", "Total", "Average", "Percentage", "Grade");
         System.out.println("-------------------------------------------------------------------------");
         for (int i = 0; i < scores.length; i++) {
             System.out.printf("%-5d | %-5d | %-5d | %-5d | %-6.2f | %-7.2f | %-9.2f%% | %-5s\n", 
@@ -48,16 +43,13 @@ public class StudentGrades {
                 stats[i][0], stats[i][1], stats[i][2], grades[i]);
         }
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of students: ");
         int n = sc.nextInt();
-        
         int[][] scores = generateScores(n);
         double[][] stats = calculateStats(scores);
         String[] grades = calculateGrades(stats);
-        
         displayScorecard(scores, stats, grades);
     }
 }

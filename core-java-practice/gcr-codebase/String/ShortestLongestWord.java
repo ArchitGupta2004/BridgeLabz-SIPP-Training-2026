@@ -1,14 +1,11 @@
 import java.util.Scanner;
-
 public class ShortestLongestWord {
     public static int getLength(String text) {
         return text.length();
     }
-
     public static String[] splitWords(String text) {
         return text.split(" ");
     }
-
     public static String[][] getWordsAndLengths(String[] words) {
         String[][] result = new String[words.length][2];
         for (int i = 0; i < words.length; i++) {
@@ -17,10 +14,8 @@ public class ShortestLongestWord {
         }
         return result;
     }
-
     public static String[] findShortestAndLongest(String[][] wordLengths) {
-        if (wordLengths.length == 0) return new String[]{"", ""};
-        
+        if (wordLengths.length == 0) return new String[]{"", ""};  
         String shortest = wordLengths[0][0];
         String longest = wordLengths[0][0];
         int minLen = Integer.parseInt(wordLengths[0][1]);
@@ -36,10 +31,8 @@ public class ShortestLongestWord {
                 maxLen = len;
                 longest = wordLengths[i][0];
             }
-        }
         return new String[]{shortest, longest};
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter text: ");
@@ -47,8 +40,7 @@ public class ShortestLongestWord {
         
         String[] words = splitWords(text);
         String[][] wordLengths = getWordsAndLengths(words);
-        String[] result = findShortestAndLongest(wordLengths);
-        
+        String[] result = findShortestAndLongest(wordLengths);       
         System.out.println("Shortest word: " + result[0]);
         System.out.println("Longest word: " + result[1]);
     }

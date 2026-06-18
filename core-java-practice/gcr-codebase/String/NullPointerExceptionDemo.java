@@ -3,7 +3,6 @@ public class NullPointerExceptionDemo {
         String text = null;
         int length = text.length(); // Generates NullPointerException
     }
-
     public static void handleException() {
         String text = null;
         try {
@@ -12,7 +11,6 @@ public class NullPointerExceptionDemo {
             System.out.println("Caught Exception: " + e.toString());
         }
     }
-
     public static void main(String[] args) {
         System.out.println("Calling handleException() first to show successful catch:");
         handleException();

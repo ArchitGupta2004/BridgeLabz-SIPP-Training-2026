@@ -1,10 +1,8 @@
 import java.util.Scanner;
-
 public class IllegalArgumentExceptionDemo {
     public static void generateException(String text) {
         String sub = text.substring(5, 2);
     }
-
     public static void handleException(String text) {
         try {
             String sub = text.substring(5, 2);
@@ -16,12 +14,10 @@ public class IllegalArgumentExceptionDemo {
             System.out.println("Caught RuntimeException: " + e.toString());
         }
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string (at least 6 chars): ");
         String text = scanner.next();
-
         System.out.println("Handling Exception:");
         handleException(text);
         

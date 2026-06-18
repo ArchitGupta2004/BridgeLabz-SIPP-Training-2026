@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class ConvertToLowercase {
     public static String toLowerCaseCustom(String text) {
         StringBuilder result = new StringBuilder();
@@ -12,19 +11,15 @@ public class ConvertToLowercase {
         }
         return result.toString();
     }
-
     public static boolean compareStrings(String str1, String str2) {
         return str1.equals(str2);
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a complete text: ");
         String text = scanner.nextLine();
-
         String customLower = toLowerCaseCustom(text);
         String builtInLower = text.toLowerCase();
-
         System.out.println("Custom Lowercase: " + customLower);
         System.out.println("Built-in Lowercase: " + builtInLower);
 

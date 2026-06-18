@@ -1,12 +1,10 @@
 import java.util.Scanner;
-
 public class DeckOfCards {
     public static String[] initDeck() {
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
         int numOfCards = suits.length * ranks.length;
-        String[] deck = new String[numOfCards];
-        
+        String[] deck = new String[numOfCards]; 
         int k = 0;
         for (int i = 0; i < suits.length; i++) {
             for (int j = 0; j < ranks.length; j++) {
@@ -15,7 +13,6 @@ public class DeckOfCards {
         }
         return deck;
     }
-
     public static void shuffleDeck(String[] deck) {
         int n = deck.length;
         for (int i = 0; i < n; i++) {
@@ -31,7 +28,6 @@ public class DeckOfCards {
             System.out.println("Not enough cards to distribute!");
             return null;
         }
-        
         String[][] players = new String[xPlayers][nCards];
         int cardIdx = 0;
         for (int i = 0; i < xPlayers; i++) {
@@ -41,7 +37,6 @@ public class DeckOfCards {
         }
         return players;
     }
-
     public static void printPlayers(String[][] players) {
         if (players == null) return;
         for (int i = 0; i < players.length; i++) {
@@ -52,14 +47,12 @@ public class DeckOfCards {
             System.out.println();
         }
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of players: ");
         int xPlayers = sc.nextInt();
         System.out.print("Enter number of cards per player: ");
         int nCards = sc.nextInt();
-
         String[] deck = initDeck();
         shuffleDeck(deck);
         String[][] distributed = distributeCards(deck, nCards, xPlayers);
