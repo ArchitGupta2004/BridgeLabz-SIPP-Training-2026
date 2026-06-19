@@ -1,0 +1,5 @@
+===== REPORT CARD =====
+Name: John       Average Marks: 84.33
+Name: Alice      Average Marks: 86.67
+Name: Bob        Average Marks: 71.00
+=======================

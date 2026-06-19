@@ -1,0 +1,3 @@
+Laptop-10
+Mouse-0
+Keyboard-5
