@@ -1,5 +1,4 @@
 import java.util.PriorityQueue;
-
 class Patient {
     String name;
     int severity;
